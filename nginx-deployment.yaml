@@ -4,7 +4,7 @@ metadata:            # Metadatos sobre el recurso
   name: nginx-deployment  # Nombre del Deployment, debe ser único en el namespace
   namespace: demo        # Namespace donde se creará este recurso, permite la separación lógica
 spec:                # Especificaciones del Deployment
-  replicas: 3        # Número de réplicas (Pods) que queremos que Kubernetes mantenga
+  replicas: 15        # Número de réplicas (Pods) que queremos que Kubernetes mantenga
   selector:          # Selector utilizado para identificar los Pods gestionados por este Deployment
     matchLabels:     # Las etiquetas deben coincidir con las etiquetas definidas en los Pods
       app: nginx     # Etiqueta clave-valor para vincular este Deployment con los Pods
