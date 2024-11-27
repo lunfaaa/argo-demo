@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service2
+  namespace: demo  # Namespace específico
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80        # Puerto interno del servicio
+      targetPort: 80  # Puerto donde la aplicación escucha
+      nodePort: 30080 # Puerto fijo del nodo (opcional, Kubernetes asignará uno si no se especifica)
+  type: NodePort
+
